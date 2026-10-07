@@ -24,18 +24,22 @@ Document at least 3 bugs you found. Add rows as needed.
 
 ## 2. How did you use AI as a teammate?
 
-- Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)? Chatgpt
-- Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result). One correct suggestion was that the New Game problem was caused by the game resetting the secret number and attempts but not resetting st.session_state.status back to "playing". I verified this by reviewing the New Game section of the code and testing the game again after the change. 
-- Give one example of an AI suggestion you did not accept as written (including what the AI suggested, why you rejected or changed it, and how you verified your version). It does not have to be a suggestion that was wrong: over-engineered, out of scope, harder to read, or a poor fit for this codebase all count. I did not accept every AI suggestion automatically; for example, when additional possible bugs were identified, I focused first on the bugs I had personally reproduced so that my changes stayed within the scope of the assignment.
-
+- Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
+  I used ChatGPT and Claude as AI teammates during this project. ChatGPT helped me understand the assignment, and identify the bugs I observed. Claude helped me inspect the code, make targeted fixes, refactor the logic into logic_utils.py, and review the changes.
+- Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
+  One correct suggestion was to reset st.session_state.status to "playing" when the New Game button is clicked. The AI explained that the game remained in the "won" state because the status variable was not being reset. I verified the fix by winning the game, clicking New Game, and confirming that I could start a new round instead of seeing the message that I had already won.
+- Give one example of an AI suggestion you did not accept as written (including what the AI suggested, why you rejected or changed it, and how you verified your version). It does not have to be a suggestion that was wrong: over-engineered, out of scope, harder to read, or a poor fit for this codebase all count.
+  At one point, the AI identified and fixed an additional bug involving the secret number being converted from an integer to a string on some attempts. Although this was a valid issue, it was not the second bug I originally wanted to focus on at that stage, which was the New Game problem. I therefore kept the additional finding in mind but redirected the AI to fix only the New Game session-state issue so that I could stay within the scope of the assignment. I then manually tested the New Game behavior to verify that the targeted fix worked.
 ---
 
 ## 3. Debugging and testing your fixes
 
-- How did you decide whether a bug was really fixed? I decided a bug was fixed only after I could repeat the same action that originally caused the problem and get the expected result. 
-- Describe at least one test you ran (manual or using pytest)  
-  and what it showed you about your code.
+- How did you decide whether a bug was really fixed?
+  I decided a bug was fixed only after I could repeat the same action that originally caused the problem and get the expected result. 
+- Describe at least one test you ran (manual or using pytest) and what it showed you about your code.
+  I manually tested the hint logic when the correct number was 25. I entered 24 and confirmed that the game told me to go higher, then I entered 26 and confirmed that the game told me to go lower. This showed me that the higher/lower hint logic was working correctly after the fix. And selecting new game worked effectively
 - Did AI help you design or understand any tests? How?
+  Yes. I used AI to review my testing approach and suggest additional cases I could use to verify the fix more thoroughly. For example, it reinforced the idea of testing values just below, just above, and equal to the secret number so I could confirm that each possible outcome behaved correctly.
 
 ---
 
