@@ -65,27 +65,6 @@ tests/test_game_logic.py::test_guess_too_high PASSED                            
 tests/test_game_logic.py::test_guess_too_low PASSED                                                                                                                                                                                   [100%]
 
 ============================================================================================================ 3 passed in 0.25s =============================================================================================================
-```
-The game selects a secret number within the chosen difficulty range.
-
-When the secret number is 25, the user enters 24.
-
-The game returns "Too Low" and tells the user to "Go HIGHER!"
-
-The user enters 26, and the game returns "Too High" and tells the user to "Go LOWER!"
-
-The user enters 25, and the game displays "Correct!" and ends the round.
-
-The user clicks New Game, and the game resets to a new playable round with a new secret number.
-
-Screenshot (optional):
-
-🧪 Test Results
-
-python -m pytest tests -v
-
-3 passed
-
 The automated tests verified the following:
 A correct guess returns "Win" and "🎉 Correct!".
 A guess above the secret returns "Too High" and "📉 Go LOWER!".
