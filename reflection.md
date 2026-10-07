@@ -5,7 +5,6 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 1. What was broken when you started?
 
 - What did the game look like the first time you ran it?
-  
   The first time I ran the game, it looked like a normal number guessing game with a difficulty setting, score, number of attempts, and a section called Developer Debug Info. 
 - List at least two concrete bugs you noticed at the start  
   (for example: "the hints were backwards").
@@ -17,9 +16,9 @@ Document at least 3 bugs you found. Add rows as needed.
 
 | Input | Expected Behavior | Actual Behavior | Console Output / Error |
 |-------|-------------------|-----------------|------------------------|
-| | | | |
-| | | | |
-| | | | |
+| Entered `7` when the secret number was `8` | The game should tell me to go higher | The game told me to go lower | No console error |
+| Entered `-1` | The game should reject the input because it is outside the valid range | The game accepted `-1` and continued giving a hint | No console error |
+| Correctly guessed `8`, then clicked **New Game** | The game should reset and allow me to start a new round | The game continued saying that I had already won | No console error |
 
 ---
 
