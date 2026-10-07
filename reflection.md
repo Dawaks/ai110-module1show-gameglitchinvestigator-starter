@@ -5,6 +5,7 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 1. What was broken when you started?
 
 - What did the game look like the first time you ran it?
+  
   The first time I ran the game, it looked like a normal number guessing game with a difficulty setting, score, number of attempts, and a section called Developer Debug Info. 
 - List at least two concrete bugs you noticed at the start  
   (for example: "the hints were backwards").
