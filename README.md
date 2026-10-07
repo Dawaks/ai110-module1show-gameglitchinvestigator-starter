@@ -65,6 +65,7 @@ tests/test_game_logic.py::test_guess_too_high PASSED                            
 tests/test_game_logic.py::test_guess_too_low PASSED                                                                                                                                                                                   [100%]
 
 ============================================================================================================ 3 passed in 0.25s =============================================================================================================
+
 The automated tests verified the following:
 A correct guess returns "Win" and "🎉 Correct!".
 A guess above the secret returns "Too High" and "📉 Go LOWER!".
