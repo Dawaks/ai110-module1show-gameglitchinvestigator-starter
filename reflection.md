@@ -24,15 +24,15 @@ Document at least 3 bugs you found. Add rows as needed.
 
 ## 2. How did you use AI as a teammate?
 
-- Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
-- Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
-- Give one example of an AI suggestion you did not accept as written (including what the AI suggested, why you rejected or changed it, and how you verified your version). It does not have to be a suggestion that was wrong: over-engineered, out of scope, harder to read, or a poor fit for this codebase all count.
+- Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)? Chatgpt
+- Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result). One correct suggestion was that the New Game problem was caused by the game resetting the secret number and attempts but not resetting st.session_state.status back to "playing". I verified this by reviewing the New Game section of the code and testing the game again after the change. 
+- Give one example of an AI suggestion you did not accept as written (including what the AI suggested, why you rejected or changed it, and how you verified your version). It does not have to be a suggestion that was wrong: over-engineered, out of scope, harder to read, or a poor fit for this codebase all count. I did not accept every AI suggestion automatically; for example, when additional possible bugs were identified, I focused first on the bugs I had personally reproduced so that my changes stayed within the scope of the assignment.
 
 ---
 
 ## 3. Debugging and testing your fixes
 
-- How did you decide whether a bug was really fixed?
+- How did you decide whether a bug was really fixed? I decided a bug was fixed only after I could repeat the same action that originally caused the problem and get the expected result. 
 - Describe at least one test you ran (manual or using pytest)  
   and what it showed you about your code.
 - Did AI help you design or understand any tests? How?
